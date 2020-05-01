@@ -20,6 +20,9 @@ class Tilly {
 	/**Tilly Math */
 	public $math;
 
+	/**Value for chaining */
+	protected $chain_value;
+
 	public function __construct()
 	{
 		$this->collection = new Tilly\Collection;
@@ -69,5 +72,17 @@ class Tilly {
 		}
 
 		return $result;
+	}
+
+	/**
+	 * Allow method chaining on a value
+	 * 
+	 * @param mixed $value Value to chain methods on
+	 * 
+	 * @return Tilly
+	 */
+	public function chain($value): Tilly {
+		$this->chain_value = $value;
+		return $this;
 	}
 }
