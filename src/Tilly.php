@@ -11,24 +11,8 @@ A simple utility toolkit for PHP
 @author Michael Darko <mickdd22@gmail.com>
 */
 class Tilly {
-	/**Tilly Collections */
-	public $collection;
-
-	/**Tilly Func */
-	public $func;
-
-	/**Tilly Math */
-	public $math;
-
 	/**Value for chaining */
 	protected $chain_value;
-
-	public function __construct()
-	{
-		$this->collection = new Tilly\Collection;
-		$this->func = new Tilly\Func;
-		$this->math = new Tilly\Math;
-	}
 
 	public function arrayPush(&$array, $values)
 	{
@@ -84,5 +68,10 @@ class Tilly {
 	public function chain($value): Tilly {
 		$this->chain_value = $value;
 		return $this;
+	}
+
+	/** Get the value from a chain */
+	public function value() {
+		return $this->chain_value;
 	}
 }
