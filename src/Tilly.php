@@ -11,6 +11,22 @@ A simple utility toolkit for PHP
 @author Michael Darko <mickdd22@gmail.com>
 */
 class Tilly {
+	/**Tilly Collections */
+	public $collection;
+
+	/**Tilly Func */
+	public $func;
+
+	/**Tilly Math */
+	public $math;
+
+	public function __construct()
+	{
+		$this->collection = new Tilly\Collection;
+		$this->func = new Tilly\Func;
+		$this->math = new Tilly\Math;
+	}
+
 	public function arrayPush(&$array, $values)
 	{
 		$index = -1;
