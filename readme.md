@@ -2,7 +2,7 @@
 <p align="center">
     <br><br>
     <img src="https://leaf-docs.netlify.app/images/logo.png" height="100"/>
-    <h1 align="center">Leaf PHP Framework</h1>
+    <h1 align="center">Tilly</h1>
     <br>
     <br><br><br>
 </p>
